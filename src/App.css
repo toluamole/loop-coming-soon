@@ -1,38 +1,229 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo-box{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.App-logo{
+  width: 30px;
+  margin-right: 5px;
+  animation: App-logo-spin 2s linear;
+  -webkit-animation: App-logo-spin 2s linear;
+  -moz-animation: App-logo-spin 2s linear;
 }
 
-.App-link {
-  color: #61dafb;
+.App-logo-text{
+  width: 45px;
 }
 
 @keyframes App-logo-spin {
-  from {
+  from{
+    opacity:0;
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.App-header-nav{
+  padding: 6rem;
+  margin-bottom: 2rem;
+}
+
+.App-header{
+  background: #FF6F61;
+  color: #FFFFFF;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.App-header-hero-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-header-hero-main{
+  margin-bottom: 17rem;
+}
+
+.App-header-image{
+  align-self: flex-start;
+  width: 12rem;
+  /* transform: translate(-20rem); */
+  margin-left: 32rem;
+  margin-bottom: 1.6rem;
+}
+
+.App-header-paragraph{
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: inherit;
+  line-height: 2;
+  width: 62rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.App-header-primary-heading{
+  font-size: 2.5rem;
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 40px;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+
+h5{
+  font-size: 1.8rem !important;
+  font: inherit;
+}
+
+.footer{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.footer-left-text, .footer-right-text{
+  margin-bottom: 2rem;
+  font: inherit;
+  font-weight: 300 !important;
+  font-size: 1.5rem !important;
+}
+
+.footer-right-text{
+  margin-left: 6.5rem;
+}
+
+.footer-left-icons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 5rem;
+}
+
+.footer-left-icons img, .footer-right-icons img, .footer-share-mobile-btn img{
+  margin-right: 2rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.footer-left-icons img:hover, .footer-right-icons img:hover, .footer-share-btn:hover{
+  transform: translateY(3px);
+  box-shadow: 0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.footer-right-icons{
+  margin-left: 6rem;
+}
+
+.footer-share-btn {
+  border: 1px solid white;
+  border-radius: 150px;
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  padding-top: .3rem;
+  font-size: 1.3rem !important;
+  cursor: pointer;
+  transition: all .3s ease;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer-share-mobile-btn{
+  display: none;
+}
+
+ 
+/* MOBILE RESPONSIVENESS */
+@media only screen and (max-width: 56.25em){ /*900px */
+  .App-header-image{
+    margin-left: 18rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em){ /*600px */
+  .App-header-nav{
+    padding: 3rem;
+    margin-bottom: 10rem;
+  }
+  .App-logo{
+    width: 25px;
+  }
+  
+  .App-logo-text{
+    width: 30px;
+  }
+  
+  .App-header-image{
+    margin-left: -.8rem;
+    margin-bottom: 2rem;
+    width: 8rem;
+  }
+
+  .App-header-hero-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 3rem;
+    margin-bottom: 20rem;
+  }
+
+  .App-header-paragraph{
+    font-size: 1.6rem;
+    width: 320px;
+    text-align: left;
+  }
+  
+  .footer-left-text, .footer-right-text{
+    font-size: 1rem !important;
+  }
+
+  .footer-right-text{
+    margin-left: 3rem;
+  }
+  
+  .footer-left-icons{
+    margin-right: 3rem;
+  }
+  .footer-right-icons{
+    margin-left: 3rem;
+  }
+  .footer-left-icons img, .footer-right-icons img, .footer-share-mobile-btn img{
+    margin-right: .7rem;
+    padding: .5rem;
+    width: 2.5rem;
+  }
+  .footer-share-btn{
+    display: none
+  }
+  .footer-share-mobile-btn{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 20em){ /*320px */
+  .App-header-paragraph{
+    font-size: 1.4rem;
+    width: 27rem;
+    text-align: left;
+  }
+  .footer-left-text, .footer-right-text{
+    display: none;
   }
 }
